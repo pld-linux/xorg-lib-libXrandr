@@ -18,6 +18,7 @@ BuildRequires:	libtool
 BuildRequires:	pkg-config
 BuildRequires:	xorg-proto-randrproto-devel
 BuildRequires:	xorg-util-util-macros
+Obsoletes:	libXrandr
 BuildRoot:	%{tmpdir}/libXrandr-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -39,6 +40,7 @@ Requires:	xorg-lib-libXrandr = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-lib-libXrender-devel
 Requires:	xorg-proto-randrproto-devel
+Obsoletes:	libXrandr-devel
 
 %description devel
 X Resize and Rotate extension library.
@@ -59,6 +61,7 @@ Summary:	Static libXrandr libraries
 Summary(pl):	Biblioteki statyczne libXrandr
 Group:		Development/Libraries
 Requires:	xorg-lib-libXrandr-devel = %{version}-%{release}
+Obsoletes:	libXrandr-static
 
 %description static
 X Resize and Rotate extension library.
