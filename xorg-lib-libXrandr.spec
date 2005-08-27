@@ -1,5 +1,3 @@
-
-#
 Summary:	X Randr extension library
 Summary(pl):	Biblioteka rozszerzenia X Randr
 Name:		xorg-lib-libXrandr
@@ -12,14 +10,14 @@ Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libXrandr-%{version}.tar.bz
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	xorg-lib-libXext-devel
-BuildRequires:	xorg-lib-libXrender-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
+BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-lib-libXrender-devel
 BuildRequires:	xorg-proto-randrproto-devel
 BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXrandr
-BuildRoot:	%{tmpdir}/libXrandr-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
@@ -31,12 +29,11 @@ X Resize and Rotate extension library.
 Biblioteka rozszerzenia X Resize and Rotate, s³u¿±cego do zmiany
 rozmiaru i obracania ekranu X.
 
-
 %package devel
 Summary:	Header files libXrandr development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libXrandr
 Group:		X11/Development/Libraries
-Requires:	xorg-lib-libXrandr = %{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-lib-libXrender-devel
 Requires:	xorg-proto-randrproto-devel
@@ -55,12 +52,11 @@ rozmiaru i obracania ekranu X.
 Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
 u¿ywaj±cych biblioteki libXrandr.
 
-
 %package static
 Summary:	Static libXrandr libraries
 Summary(pl):	Biblioteki statyczne libXrandr
-Group:		Development/Libraries
-Requires:	xorg-lib-libXrandr-devel = %{version}-%{release}
+Group:		X11/Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXrandr-static
 
 %description static
@@ -74,10 +70,8 @@ rozmiaru i obracania ekranu X.
 
 Pakiet zawiera statyczn± bibliotekê libXrandr.
 
-
 %prep
 %setup -q -n libXrandr-%{version}
-
 
 %build
 %{__libtoolize}
@@ -101,21 +95,18 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog
-%attr(755,root,wheel) %{_libdir}/libXrandr.so.*
-
+%attr(755,root,root) %{_libdir}/libXrandr.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/X11/extensions/*.h
+%attr(755,root,root) %{_libdir}/libXrandr.so
 %{_libdir}/libXrandr.la
-%attr(755,root,wheel) %{_libdir}/libXrandr.so
+%{_includedir}/X11/extensions/*.h
 %{_pkgconfigdir}/xrandr.pc
 %{_mandir}/man3/*.3*
-
 
 %files static
 %defattr(644,root,root,755)
