@@ -1,20 +1,20 @@
 Summary:	X Randr extension library
 Summary(pl):	Biblioteka rozszerzenia X Randr
 Name:		xorg-lib-libXrandr
-Version:	0.99.0
-Release:	0.03
+Version:	0.99.1
+Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libXrandr-%{version}.tar.bz2
-# Source0-md5:	1bf96aa604b2ecad9abff643a663f2e3
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/lib/libXrandr-%{version}.tar.bz2
+# Source0-md5:	7f7bbb0b8644f0f84618af51583ca3f3
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXrender-devel
-BuildRequires:	xorg-proto-randrproto-devel
+BuildRequires:	xorg-proto-randrproto-devel >= 0.99
 BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXrandr
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,7 +33,7 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-lib-libXrender-devel
-Requires:	xorg-proto-randrproto-devel
+Requires:	xorg-proto-randrproto-devel >= 0.99
 Obsoletes:	libXrandr-devel
 
 %description devel
@@ -84,6 +84,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
+	libmandir=%{_mandir}/man3 \
 	pkgconfigdir=%{_pkgconfigdir}
 
 %clean
@@ -94,7 +95,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog
+%doc AUTHORS COPYING ChangeLog
 %attr(755,root,root) %{_libdir}/libXrandr.so.*.*.*
 
 %files devel
@@ -103,7 +104,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libXrandr.la
 %{_includedir}/X11/extensions/*.h
 %{_pkgconfigdir}/xrandr.pc
-%{_mandir}/man3/*.3*
+%{_mandir}/man3/*.3x*
 
 %files static
 %defattr(644,root,root,755)
