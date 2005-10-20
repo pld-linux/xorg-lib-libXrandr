@@ -15,7 +15,7 @@ BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXrender-devel
 BuildRequires:	xorg-proto-randrproto-devel >= 0.99
-BuildRequires:	xorg-util-util-macros
+BuildRequires:	xorg-util-util-macros >= 0.99.1
 Obsoletes:	libXrandr
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
