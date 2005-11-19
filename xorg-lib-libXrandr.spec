@@ -1,12 +1,12 @@
 Summary:	X Randr extension library
 Summary(pl):	Biblioteka rozszerzenia X Randr
 Name:		xorg-lib-libXrandr
-Version:	0.99.1
+Version:	0.99.2
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/lib/libXrandr-%{version}.tar.bz2
-# Source0-md5:	7f7bbb0b8644f0f84618af51583ca3f3
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/lib/libXrandr-%{version}.tar.bz2
+# Source0-md5:	191fc44dd67200cb0e7b4d1b2ed5388c
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
