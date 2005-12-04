@@ -27,8 +27,8 @@ Biblioteka rozszerzenia X Resize and Rotate, s³u¿±cego do zmiany
 rozmiaru i obracania ekranu X.
 
 %package devel
-Summary:	Header files libXrandr development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libXrandr
+Summary:	Header files for libXrandr library
+Summary(pl):	Pliki nag³ówkowe biblioteki libXrandr
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -40,7 +40,7 @@ Obsoletes:	libXrandr-devel
 X Resize and Rotate extension library.
 
 This package contains the header files needed to develop programs that
-use these libXrandr.
+use libXrandr.
 
 %description devel -l pl
 Biblioteka rozszerzenia X Resize and Rotate, s³u¿±cego do zmiany
