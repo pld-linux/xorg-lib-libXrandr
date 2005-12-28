@@ -5,8 +5,8 @@ Version:	1.1.0.2
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC4/lib/libXrandr-%{version}.tar.bz2
-# Source0-md5:	ddc71d82a76819a777f696d2b4659e98
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/lib/libXrandr-%{version}.tar.bz2
+# Source0-md5:	9188bb611be2a67f9019208b27016670
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
