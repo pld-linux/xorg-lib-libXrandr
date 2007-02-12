@@ -1,5 +1,5 @@
 Summary:	X Randr extension library
-Summary(pl):	Biblioteka rozszerzenia X Randr
+Summary(pl.UTF-8):   Biblioteka rozszerzenia X Randr
 Name:		xorg-lib-libXrandr
 Version:	1.1.2
 Release:	3
@@ -22,13 +22,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 X Resize and Rotate extension library.
 
-%description -l pl
-Biblioteka rozszerzenia X Resize and Rotate, s³u¿±cego do zmiany
+%description -l pl.UTF-8
+Biblioteka rozszerzenia X Resize and Rotate, sÅ‚uÅ¼Ä…cego do zmiany
 rozmiaru i obracania ekranu X.
 
 %package devel
 Summary:	Header files for libXrandr library
-Summary(pl):	Pliki nag³ówkowe biblioteki libXrandr
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libXrandr
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -42,16 +42,16 @@ X Resize and Rotate extension library.
 This package contains the header files needed to develop programs that
 use libXrandr.
 
-%description devel -l pl
-Biblioteka rozszerzenia X Resize and Rotate, s³u¿±cego do zmiany
+%description devel -l pl.UTF-8
+Biblioteka rozszerzenia X Resize and Rotate, sÅ‚uÅ¼Ä…cego do zmiany
 rozmiaru i obracania ekranu X.
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libXrandr.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych biblioteki libXrandr.
 
 %package static
 Summary:	Static libXrandr libraries
-Summary(pl):	Biblioteki statyczne libXrandr
+Summary(pl.UTF-8):   Biblioteki statyczne libXrandr
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXrandr-static
@@ -61,11 +61,11 @@ X Resize and Rotate extension library.
 
 This package contains the static libXrandr library.
 
-%description static -l pl
-Biblioteka rozszerzenia X Resize and Rotate, s³u¿±cego do zmiany
+%description static -l pl.UTF-8
+Biblioteka rozszerzenia X Resize and Rotate, sÅ‚uÅ¼Ä…cego do zmiany
 rozmiaru i obracania ekranu X.
 
-Pakiet zawiera statyczn± bibliotekê libXrandr.
+Pakiet zawiera statycznÄ… bibliotekÄ™ libXrandr.
 
 %prep
 %setup -q -n libXrandr-%{version}
