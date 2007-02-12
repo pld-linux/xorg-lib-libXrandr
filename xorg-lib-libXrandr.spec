@@ -1,5 +1,5 @@
 Summary:	X Randr extension library
-Summary(pl.UTF-8):   Biblioteka rozszerzenia X Randr
+Summary(pl.UTF-8):	Biblioteka rozszerzenia X Randr
 Name:		xorg-lib-libXrandr
 Version:	1.1.2
 Release:	3
@@ -28,7 +28,7 @@ rozmiaru i obracania ekranu X.
 
 %package devel
 Summary:	Header files for libXrandr library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libXrandr
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXrandr
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -51,7 +51,7 @@ używających biblioteki libXrandr.
 
 %package static
 Summary:	Static libXrandr libraries
-Summary(pl.UTF-8):   Biblioteki statyczne libXrandr
+Summary(pl.UTF-8):	Biblioteki statyczne libXrandr
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXrandr-static
