@@ -14,7 +14,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXrender-devel
-BuildRequires:	xorg-proto-randrproto-devel >= 1.1
+BuildRequires:	xorg-proto-randrproto-devel >= 1.2
 BuildRequires:	xorg-util-util-macros >= 0.99.2
 Obsoletes:	libXrandr
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
