@@ -33,7 +33,7 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-lib-libXrender-devel
-Requires:	xorg-proto-randrproto-devel >= 1.1
+Requires:	xorg-proto-randrproto-devel >= 1.2
 Obsoletes:	libXrandr-devel
 
 %description devel
@@ -96,14 +96,16 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING ChangeLog
 %attr(755,root,root) %{_libdir}/libXrandr.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libXrandr.so.2
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXrandr.so
 %{_libdir}/libXrandr.la
-%{_includedir}/X11/extensions/*.h
+%{_includedir}/X11/extensions/Xrandr.h
 %{_pkgconfigdir}/xrandr.pc
-%{_mandir}/man3/*.3x*
+%{_mandir}/man3/XRR*.3x*
+%{_mandir}/man3/Xrandr.3x*
 
 %files static
 %defattr(644,root,root,755)
