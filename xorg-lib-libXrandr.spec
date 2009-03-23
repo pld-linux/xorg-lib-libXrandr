@@ -33,7 +33,7 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-lib-libXrender-devel
-Requires:	xorg-proto-randrproto-devel >= 1.2
+Requires:	xorg-proto-randrproto-devel >= 1.3.0
 Obsoletes:	libXrandr-devel
 
 %description devel
