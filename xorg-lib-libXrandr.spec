@@ -1,12 +1,12 @@
 Summary:	X Randr extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzenia X Randr
 Name:		xorg-lib-libXrandr
-Version:	1.3.2
+Version:	1.4.0
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXrandr-%{version}.tar.bz2
-# Source0-md5:	92473da2fccf5fac665be4fa4f2037fa
+# Source0-md5:	0c843636124cc1494e3d87df16957672
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -14,7 +14,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXrender-devel
-BuildRequires:	xorg-proto-randrproto-devel >= 1.3.0
+BuildRequires:	xorg-proto-randrproto-devel >= 1.4
 BuildRequires:	xorg-util-util-macros >= 1.8
 Obsoletes:	libXrandr
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,7 +33,7 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-lib-libXrender-devel
-Requires:	xorg-proto-randrproto-devel >= 1.3.0
+Requires:	xorg-proto-randrproto-devel >= 1.4
 Obsoletes:	libXrandr-devel
 
 %description devel
