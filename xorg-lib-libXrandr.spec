@@ -8,6 +8,7 @@ Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXrandr-%{version}.tar.bz2
 # Source0-md5:	0c843636124cc1494e3d87df16957672
 URL:		http://xorg.freedesktop.org/
+Requires:	xorg-lib-libX11 >= 1.4.99.1
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
