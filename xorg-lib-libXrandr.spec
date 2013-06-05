@@ -13,6 +13,7 @@ BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	sed >= 4.0
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXrender-devel
 BuildRequires:	xorg-proto-randrproto-devel >= 1.4
@@ -70,6 +71,9 @@ Pakiet zawiera statyczną bibliotekę libXrandr.
 
 %prep
 %setup -q -n libXrandr-%{version}
+
+# support __libmansuffix__ with "x" suffix (per FHS 2.3)
+%{__sed} -i -e 's,\.so man__libmansuffix__/,.so man3/,' man/*.man
 
 %build
 %{__libtoolize}
