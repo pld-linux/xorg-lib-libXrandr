@@ -1,18 +1,19 @@
 Summary:	X Randr extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzenia X Randr
 Name:		xorg-lib-libXrandr
-Version:	1.5.2
+Version:	1.5.3
 Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXrandr-%{version}.tar.bz2
-# Source0-md5:	18f3b20d522f45e4dadd34afb5bea048
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXrandr-%{version}.tar.xz
+# Source0-md5:	850cbc7c921c9d5d0135734b114ff6ac
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	sed >= 4.0
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-lib-libX11-devel >= 1.6
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXrender-devel
@@ -20,8 +21,9 @@ BuildRequires:	xorg-proto-randrproto-devel >= 1.5
 BuildRequires:	xorg-proto-renderproto-devel
 BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
+BuildRequires:	xz
 Requires:	xorg-lib-libX11 >= 1.6
-Obsoletes:	libXrandr
+Obsoletes:	libXrandr < 1.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -39,7 +41,7 @@ Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-lib-libXrender-devel
 Requires:	xorg-proto-randrproto-devel >= 1.5
-Obsoletes:	libXrandr-devel
+Obsoletes:	libXrandr-devel < 1.1
 
 %description devel
 X Resize and Rotate extension library.
@@ -59,7 +61,7 @@ Summary:	Static libXrandr libraries
 Summary(pl.UTF-8):	Biblioteki statyczne libXrandr
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
-Obsoletes:	libXrandr-static
+Obsoletes:	libXrandr-static < 1.1
 
 %description static
 X Resize and Rotate extension library.
