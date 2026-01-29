@@ -1,12 +1,12 @@
 Summary:	X Randr extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzenia X Randr
 Name:		xorg-lib-libXrandr
-Version:	1.5.4
+Version:	1.5.5
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXrandr-%{version}.tar.xz
-# Source0-md5:	24e0b72abe16efce9bf10579beaffc27
+# Source0-md5:	b550dfa388292a821aecdd52acecc94c
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -82,7 +82,7 @@ Pakiet zawiera statyczną bibliotekę libXrandr.
 
 %build
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__autoheader}
 %{__automake}
@@ -104,12 +104,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING ChangeLog README.md
-%attr(755,root,root) %{_libdir}/libXrandr.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libXrandr.so.2
+%{_libdir}/libXrandr.so.*.*.*
+%ghost %{_libdir}/libXrandr.so.2
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libXrandr.so
+%{_libdir}/libXrandr.so
 %{_libdir}/libXrandr.la
 %{_includedir}/X11/extensions/Xrandr.h
 %{_pkgconfigdir}/xrandr.pc
