@@ -95,6 +95,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libXrandr.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -110,7 +113,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %{_libdir}/libXrandr.so
-%{_libdir}/libXrandr.la
 %{_includedir}/X11/extensions/Xrandr.h
 %{_pkgconfigdir}/xrandr.pc
 %{_mandir}/man3/XRR*.3*
